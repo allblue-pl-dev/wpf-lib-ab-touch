@@ -32,7 +32,7 @@ namespace ABTouch
             ABTApp.Window = window;
             ABTApp.View = view;
 
-            // ABTApp.MakeFullScreen(window);
+            ABTApp.MakeFullScreen(window);
             if (!ABTApp.Debug)
                 ABTApp.HideMouse(window);
         }
