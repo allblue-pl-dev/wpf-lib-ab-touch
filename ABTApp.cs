@@ -12,9 +12,6 @@ namespace ABTouch
     public class ABTApp
     {
 
-        static public Dictionary<string, UserControl> Views =
-                new Dictionary<string, UserControl>();
-
         static private Boolean Debug = false;
 
         static private System.Windows.Window Window = null;
@@ -53,10 +50,10 @@ namespace ABTouch
             window.WindowState = WindowState.Maximized;
         }
 
-        static public void SetView(string view_name)
+        static public void SetView(UserControl view)
         {
             ABTApp.View.Children.Clear();
-            ABTApp.View.Children.Add(ABTApp.Views[view_name]);
+            ABTApp.View.Children.Add(view);
         }
 
     }
