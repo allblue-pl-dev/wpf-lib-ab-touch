@@ -48,6 +48,13 @@ namespace ABTouch
         {
             window.WindowStyle = WindowStyle.None;
             window.WindowState = WindowState.Maximized;
+
+            window.Topmost = true;
+
+            window.Deactivated += (sender, e) => {
+                window.Topmost = true;
+                window.Activate();
+            };
         }
 
         static public void SetView(UserControl view)
