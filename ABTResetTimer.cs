@@ -14,7 +14,7 @@ namespace ABTouch
     public class ABTRestTimer
     {
 
-        const int DefaultTimerInterval = 5000;
+        const int DefaultTimerInterval = 180;
 
 
         private Window window = null;
@@ -22,7 +22,7 @@ namespace ABTouch
 
         private DispatcherTimer timer = null;
 
-        int timerInterval = 5;
+        int timerInterval = ABTRestTimer.DefaultTimerInterval;
 
 
         public ABTRestTimer(Window window, Action callback, int timer_interval_in_seconds)
